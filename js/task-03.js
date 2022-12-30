@@ -16,10 +16,10 @@ const images = [
 const ulEl = document.querySelector('.gallery');
 
 const createEl = images.forEach(element => {
-  return ulEl.insertAdjacentHTML(
+  ulEl.insertAdjacentHTML(
     'beforeend',
     `<li class="item"><img src=${element.url} alt="${element.alt}" class = "img"/></li>`
   );
 });
 
-const addEl = ulEl.append(createEl);
+ulEl.append(createEl);
